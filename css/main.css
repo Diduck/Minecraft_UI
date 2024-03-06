@@ -1,0 +1,94 @@
+body, html{
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	background-color: black;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.bg-blur{
+	background-image: url('../img/bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+	background-position: center;
+}
+
+.btn-list{
+	position: absolute;
+
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	width: calc(100% / 2 / 2);
+
+
+	animation: start-btn 2s ease-out;
+}
+
+@keyframes start-btn {
+	0%{
+		opacity: 0;
+		transform: translate(-50%, -30%);;
+}
+	100%{
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.margin-yes{
+	width: 100%;
+	text-align: center;
+	align-items: center;
+
+	padding: 5px;
+	font-size: large;
+	margin: 3px;
+}
+
+.two-btn{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.two-btn button{
+	width: 100%;
+	justify-content: space-between;
+}
+
+
+button{
+	background-color: transparent;
+	color: white;
+	border: 1px solid rgb(71, 71, 71);
+	border-radius: 20px;
+}
+
+button:hover{
+	border-color: rgb(71, 71, 71) rgb(71, 71, 71) rgb(94, 94, 94) rgb(71, 71, 71);
+}
+
+button:focus{
+	border-color: rgb(71, 71, 71) rgb(71, 71, 71) rgb(71, 71, 71) rgb(71, 71, 71);
+	animation: Color-btn 1s ease-out;
+}
+
+@keyframes Color-btn {
+	0%{
+		border-color: rgb(71, 71, 71) rgb(71, 71, 71) rgb(200, 200, 200) rgb(71, 71, 71);
+	}
+
+	100%{
+		border-color: rgb(71, 71, 71) rgb(71, 71, 71) rgb(71, 71, 71) rgb(71, 71, 71);
+	}
+}
